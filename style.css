@@ -26,6 +26,7 @@ body
     height: 300px;
     text-align: center;
     position: relative;
+    overflow: hidden;
 }
 
 .container div:hover
@@ -37,6 +38,7 @@ body
 {
     background-image: url(img/golo.jpg);
     background-position: center;
+    background-position-y: -60px;
     background-size: cover;
 }
 
@@ -58,41 +60,60 @@ body
 {
     background-image: url(img/thug_golo.jpg);
     background-position: center;
+    background-position-y: -50px;
     background-size: cover;
 }
 
 h3
 {
-    margin: 30px 0;
+    /* margin: 30px 0; */
+    padding: 30px 0;
     text-transform: uppercase;
-    color: darkred;
-    z-index: 2;
+    color: #fff;
+    transform: translateY(200px);
+    transition: .5s;
+    /* background: #ffffff09; */
+    /* backdrop-filter: blur(5px); */
+}
+
+.container div:hover h3
+{
+    transform: translateY(0);
 }
 
 p
 {
-    padding: 5px;
+    padding: 5px 5px 50px 5px;
     text-align: center;
     color: #fff;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
+    transform: rotate(180deg) translateX(200px);
+    transition: .5s;
+}
 
-    z-index: 2;
+.container div:hover p
+{
+    transform: rotate(0deg);
 }
 
 button
 {
-    margin-top: 30px;
     padding: 10px 20px;
     border-radius: 20px;
     border: none;
     text-transform: uppercase;
     color: #fff;
-    background: linear-gradient(to top, #000000e0, red);
-    z-index: 3;
+    background: linear-gradient(to top, #000000e0, rgba(255, 0, 0, 0.623));
+    transform: translateY(70px);
+    transition: .5s;
 }
 
 button:hover
 {
     box-shadow: 0 0 5px 1px pink;
+}
+
+.container div:hover button
+{
+    transform: translateY(0);
 }
