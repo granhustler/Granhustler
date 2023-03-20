@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: roboto, sans-serif;
+    font-family: 'JetBrains Mono', sans-serif;
     text-decoration: none;
     list-style-type: none;
 }
@@ -69,6 +69,7 @@ section .yeet-article__text
 {
     text-align: center;
     padding: 0 60px;
+    overflow: hidden;
 }
 
 .yeet-article__text::before
@@ -84,7 +85,7 @@ section .yeet-article__text
     z-index: -1;
 }
 
-.yeet-article__text::after
+/* .yeet-article__text::after
 {
     content: '';
     position: absolute;
@@ -95,7 +96,7 @@ section .yeet-article__text
     background: linear-gradient(#2196f3, #e91e63);
     clip-path: circle(20% at 10% 10%);
     z-index: -1;
-}
+} */
 
 .yeet-article__text .quote
 {
