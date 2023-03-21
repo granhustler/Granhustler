@@ -3,9 +3,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'JetBrains Mono', sans-serif;
     text-decoration: none;
     list-style-type: none;
+    font-family: poppins, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body
@@ -17,7 +18,7 @@ body
 {
     background: #000;
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
     padding: 10px;
     position: fixed;
     top: 0;
@@ -30,7 +31,7 @@ body
 {
     color: #fff;
     font-size: 1.5em;
-    float: left;
+    font-family: nt fabulous;
 }
 
 .nav__bar ul li
@@ -49,20 +50,32 @@ body
 .nav__bar ul li a
 {
     color: #fff;
-
 }
 
 section.yeet__article
 {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 56px;
 }
 
-.yeet-article__img img
+.img-scale__container
 {
-  margin-left: -76px;
-  box-shadow: 0 0 5px 2px;
+  /* box-shadow: 3px 3px 15px 1px; */
+  height: 625px;
+  overflow: hidden;
+}
+
+.img-scale__container:hover
+{
+  box-shadow: 3px 3px 15px 1px black, 1px 1px 20px white;
+  transition: 2s ease;
+}
+
+.img-scale__container:hover img
+{
+  scale: 1.05;
+  transition: 2s ease;
 }
 
 section .yeet-article__text
@@ -109,13 +122,16 @@ section .yeet-article__text
   display: block;
   margin-bottom: 30px;
   font-size: 2em;
+  font-family: NT Fabulous, sans-serif;
 }
 
 .yeet-article__text p
 {
   font-size: 1.2em;
-  width: 500px;
-  text-align: center;
+  width: 90%;
+  text-align: justify;
+  margin: 0 auto;
+  font-family: poppins;
 }
 
 .container 
@@ -132,6 +148,7 @@ section .yeet-article__text
 {
     width: 200px;
     height: 300px;
+    border-radius: 10px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -139,7 +156,7 @@ section .yeet-article__text
 
 .container div:hover
 {
-    box-shadow: 1px 3px 10px 0px #000;
+    box-shadow: 0px 2px 5px  #000;
 }
 
 .container div:first-child
@@ -207,10 +224,14 @@ section .yeet-article__text
     border-radius: 20px;
     border: none;
     text-transform: uppercase;
-    color: #fff;
     background: linear-gradient(to top, #000000e0, rgba(255, 0, 0, 0.623));
     transform: translateY(110px);
     transition: .5s;
+}
+
+.container button a
+{
+  color: #fff;
 }
 
 .container button:hover
@@ -229,7 +250,7 @@ section .yeet-article__text
     height: 100%;
 }
 
-/* CAROUSSEL */
+/*--------------------- CAROUSSEL ---------------------------*/
 
 .carousel {
     /* height: 600px; */
@@ -346,3 +367,19 @@ section .yeet-article__text
     --position: 5;
   }
   
+  /*--------------------- END OF CAROUSSEL ---------------------------*/
+
+  footer
+  {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 30px;
+    font-family: jetBrain Mono, sans-serif;
+    text-align: center;
+  }
+
+  footer p
+  {
+    margin: auto 0;
+  }
+
