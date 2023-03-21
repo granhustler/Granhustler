@@ -57,13 +57,27 @@ section.yeet__article
     display: flex;
     justify-content: space-between;
     margin-top: 56px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-height: 100vh;
+}
+
+section.yeet-article__img 
+{
+  width: 40%;
 }
 
 .img-scale__container
 {
-  /* box-shadow: 3px 3px 15px 1px; */
-  height: 625px;
+  /* height: 625px; */
+  height: auto;
+  width: 100%;
   overflow: hidden;
+}
+
+.img-scale__container img
+{
+  width: 100%;
 }
 
 .img-scale__container:hover
@@ -83,20 +97,21 @@ section .yeet-article__text
     text-align: center;
     padding: 0 60px;
     overflow: hidden;
+    width: 60%;
 }
 
-.yeet-article__text::before
+/* .yeet-article__text::before
 {
     content: '';
     position: absolute;
-    top: 77px;
+    top: 56px;
     left: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(#f00, #f0f);
     clip-path: circle(30% at right 70%);
     z-index: -1;
-}
+} */
 
 /* .yeet-article__text::after
 {
@@ -383,3 +398,105 @@ section .yeet-article__text
     margin: auto 0;
   }
 
+/*-------------------------------- RESPONSIVE -----------------------------------*/
+
+@media screen and (max-width: 1070px)
+{
+  .yeet-article__text p 
+  {
+    margin: 0;
+    font-size: 17px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 947px)
+{
+  .yeet-article__text p 
+  {
+    font-size: 15px;
+  }
+  .yeet-article__text span 
+  {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  .yeet-article__text .quote 
+  {
+    margin:  5px auto 0;
+  }
+}
+
+@media screen and (max-width: 817px)
+{
+  section .yeet-article__text 
+  {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 693px)
+{
+  .yeet-article__text .quote 
+  {
+    width: 75px;
+  }
+  .yeet-article__text span 
+  {
+    font-size: 1.2em;
+  }
+  .yeet-article__text p 
+  {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 665px)
+{
+  section.yeet__article
+  {
+    flex-direction: column;
+    height: auto;
+  }
+  section .yeet-article__text
+  {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .yeet-article__text p 
+  {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .yeet-article__img
+  {
+    width: 60%;
+  }
+  .yeet-article__img img
+  {
+    width: 100%;
+  }
+  .yeet-article__text .quote
+  {
+    width: 100px;
+  }
+  .yeet-article__text span 
+  {
+    font-size: 2em;
+  }
+  .yeet-article__text .quote
+  {
+    position: absolute;
+    top: 200px;
+    right: 80px;
+    width: 70px;
+  }
+  .yeet-article__text span
+  {
+    position: absolute;
+    top: 280px;
+    right: 0;
+  }
+}
