@@ -19,11 +19,13 @@ body
     background: #000;
     display: flex;
     justify-content:space-around;
+    align-items: center;
     padding: 10px;
     position: fixed;
     top: 0;
     width: 100%;
     margin-bottom: 100px;
+    box-shadow: 0 2px 5px #000;
     z-index: 5;
 }
 
@@ -32,6 +34,11 @@ body
     color: #fff;
     font-size: 1.5em;
     font-family: nt fabulous;
+}
+
+.nav__bar ul
+{
+  margin: 0 auto;
 }
 
 .nav__bar ul li
@@ -51,6 +58,74 @@ body
 {
     color: #fff;
 }
+
+.icons__container
+{
+  position: relative;
+  margin-left: auto;
+}
+
+.material-symbols-outlined  /* icons from Google fonts */
+{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.nav__bar .icons
+{
+  padding: 10px;
+}
+
+.nav__bar input
+{
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.share-icon__items
+{
+  position: absolute;
+  top: 70px;
+  right: 5px;
+  width: 50px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 5px 5px #000;
+  backdrop-filter: blur(2px);
+  display: none;
+  transition: .5s ease;
+}
+
+.icons__container .share-icon__items ul 
+{
+  margin:0;
+}
+
+.share-icon__items a:hover
+{
+  scale: 1.1;
+}
+
+input[type=checkbox]:checked ~ .share-icon__items
+{ 
+  display: flex;
+}
+
+/*----------------------------- END OF HEADER -------------------------------------*/
 
 section.yeet__article
 {
