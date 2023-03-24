@@ -36,12 +36,12 @@ body
     font-family: nt fabulous;
 }
 
-.nav__bar ul
+ul
 {
   margin: 0 auto;
 }
 
-.nav__bar ul li
+ul li
 {
     display: inline-block;
     padding: 10px 30px;
@@ -49,12 +49,12 @@ body
     font-size: 14px;
 }
 
-.nav__bar li:hover
+li:hover
 {
     scale: 1.1;
 }
 
-.nav__bar ul li a
+ul li a
 {
     color: #fff;
 }
@@ -96,7 +96,7 @@ body
 .share-icon__items
 {
   position: absolute;
-  top: 70px;
+  top: 64px;
   right: 5px;
   width: 50px;
   background: rgba(0, 0, 0, 0.1);
@@ -117,12 +117,99 @@ body
 
 .share-icon__items a:hover
 {
-  scale: 1.1;
+  transform: scale(1.1);
 }
 
 input[type=checkbox]:checked ~ .share-icon__items
 { 
   display: flex;
+}
+/*----------------------- HAMBURGER MENU ----------------------------------*/
+
+#toggle1
+{
+  position: absolute;
+  top: 20px;
+  right: 0;
+  opacity: 0;
+  width: 50px;
+  height: 30px;
+  display: none;
+}
+
+label 
+{
+  position: absolute; 
+  right: 7px; 
+  color: #fff; 
+  font-size: 2.5em;
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger-menu__items
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 53px;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: -3px 5px 10px #000;
+  overflow: hidden;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.hamburger-menu__ul li
+{
+  margin: 10px 0;
+  width: 100%;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.hamburger-menu__ul li a
+{
+  color: #fff; 
+  width: 100%;
+}
+
+.hamburger-menu__ul li:hover a
+{
+  color: #fff;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hamburger-menu__items ul li:hover
+{
+  background: #00000065;
+}
+
+.hamburger-menu__icons
+{
+  margin-top: 30px;
+}
+
+.hamburger-menu__icons img
+{
+  margin: 10px;
+  cursor: pointer;
+}
+
+.hamburger-menu__icons img:hover
+{
+  transform: translateY(-5px);
+  transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+input[type=checkbox]:checked ~ .hamburger-menu__items
+{
+  width: 300px;
+  transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /*----------------------------- END OF HEADER -------------------------------------*/
@@ -487,6 +574,10 @@ section .yeet-article__text
 
 @media screen and (max-width: 947px)
 {
+  .nav__bar ul li 
+  {
+    padding: 10px 20px;
+  }
   .yeet-article__text p 
   {
     font-size: 15px;
@@ -504,9 +595,32 @@ section .yeet-article__text
 
 @media screen and (max-width: 817px)
 {
+  .nav__bar ul li 
+  {
+    padding: 10px 10px;
+  }
   section .yeet-article__text 
   {
     padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 750px)
+{
+  .nav__bar ul,
+  .icons__container 
+  {
+    display: none;
+  }
+  .nav__bar
+  {
+    justify-content: flex-start;
+  }
+  nav.nav__bar label, 
+  nav.nav__bar input#toggle1,
+  .hamburger-menu__items ul.hamburger-menu__ul
+  {
+    display: block;
   }
 }
 
