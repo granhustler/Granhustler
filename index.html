@@ -14,11 +14,19 @@
         <nav class="nav__bar">
             <a href="#" class="logo">gran'hustler</a>
             <ul>
-                <li><a href="#portfolio">portfolio</a></li>
-                <li><a href="#projects">projects</a></li>
-                <li><a href="#articles">articles</a></li>
-                <li><a href="#contact">contact</a></li>
+                <li class="navbar__links">
+                    <a href="#portfolio" class="drop">portfolio <span>▼</span></a>
+                    <div class="dropdown">
+                        <a href="#goor__fall">GoorFall</a>
+                        <a href="">AbooRijal</a>
+                        <a href="">GoorYallah</a>
+                    </div>
+                </li>
+                <li class="navbar__links"><a href="#projects">projects</a></li>
+                <li class="navbar__links"><a href="#articles">articles</a></li>
+                <li class="navbar__links"><a href="#contact">contact</a></li>
             </ul>
+
             <div class="icons__container">
                 <span class="material-symbols-outlined icons" title="call">
                     call
@@ -138,7 +146,7 @@
         <div>
             <img src="img/Khadim_resized.jpg" alt="">
         </div>
-        <div class="goor-yallah__text">
+        <div class="goor-yallah__text" id="goor__fall">
             <img src="Icons/double-quote-serif-left-100.png" alt="">
             <h1>Goor diapp ci goor <br>
                 goor yegg fa Yallah
