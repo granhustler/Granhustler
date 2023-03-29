@@ -11,7 +11,7 @@
 
 body
 {
-    background: #00000009;
+    background: #ec0404a4;
 }
 
 .nav__bar
@@ -76,9 +76,9 @@ body
   position: absolute;
   top: 40px;
   left: 5px;
-  background: #00000059;
+  background: #00000093;
   border-radius: 10px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(2px);
   box-shadow: 5px 30px 35px -25px;
   display: none;
   
@@ -100,7 +100,7 @@ body
 
 .dropdown a:hover
 {
-  background: #ffffff9d;
+  background: #ffffff;
   color: #000;
 }
 
@@ -143,7 +143,7 @@ body
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 5px 50px 55px -18px #000;
+  box-shadow: inset 11px 1px 13px -18px #000, 0px 26px 28px -18px rgba(0,0,0,0.98);
   backdrop-filter: blur(2px);
   display: none;
   transition: .5s ease;
@@ -197,7 +197,6 @@ label
   width: 0;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
-  box-shadow: -23px 15px 50px -30px #000;
   overflow: hidden;
   text-align: center;
   backdrop-filter: blur(5px);
@@ -225,13 +224,13 @@ label
 
 .hamburger-menu__ul li:hover a
 {
-  color: #fff;
+  color: #000;
   transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .hamburger-menu__items ul li:hover
 {
-  background: #00000065;
+  background: #fff;
 }
 
 .hamburger-menu__icons
@@ -266,6 +265,8 @@ section.yeet__article
     margin-top: 56px;
     width: 100%;
     max-height: 100vh;
+    background: linear-gradient(360deg, #fff, #302f2fbf);
+    ;
 }
 
 section.yeet-article__img 
@@ -286,7 +287,7 @@ section.yeet-article__img
   left: 840px;
   border-radius: 50%;
   box-shadow: 5px 50px 55px -30px #000 , inset #fff 5px 5px 15px;
-  z-index: -1;
+  z-index: 1;
 }
 
 .yeet-article__img::after
@@ -301,19 +302,19 @@ section.yeet-article__img
   left: 520px;
   border-radius: 50%;
   box-shadow: 5px 50px 55px -30px #000 , inset #fff 5px 5px 15px;
-  z-index: -1;
+  z-index: 1;
 }
 
-.img-scale__container
+section .yeet-article__text
 {
-  height: auto;
-  width: 100%;
-  border-radius: 20px;
-  overflow: hidden;
-  border-bottom-left-radius: 0;
+    text-align: center;
+    padding: 0 60px;
+    overflow: hidden;
+    width: 60%;
+    z-index: 2;
 }
 
-.img-scale__container::after
+.yeet-article__text::after
 {
   content: '';
   width: 100px;
@@ -328,33 +329,6 @@ section.yeet-article__img
   z-index: -1;
 }
 
-.img-scale__container img
-{
-  width: 100%;
-  border-radius: 20px;
-  border-bottom-left-radius: 0;
-}
-
-.img-scale__container:hover
-{
-  box-shadow: 25px 45px 55px -40px black;
-  transition: 2s ease;
-}
-
-.img-scale__container:hover img
-{
-  scale: 1.05;
-  transition: 2s ease;
-}
-
-section .yeet-article__text
-{
-    text-align: center;
-    padding: 0 60px;
-    overflow: hidden;
-    width: 60%;
-}
-
 .yeet-article__text .quote
 {
   display: block;
@@ -365,6 +339,7 @@ section .yeet-article__text
 {
   display: block;
   margin-bottom: 30px;
+  color: #fff;
   font-size: 2em;
   font-family: NT Fabulous, sans-serif;
 }
@@ -385,7 +360,8 @@ section .yeet-article__text
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.1);
+    /* background: rgba(0, 0, 0, 0.1); */
+    background: linear-gradient(to bottom, #fff, #000);
 }
 
 .container div
@@ -396,11 +372,13 @@ section .yeet-article__text
     text-align: center;
     position: relative;
     overflow: hidden;
+    transition: transform 1s, box-shadow 1.3s;
 }
 
 .container div:hover
 {
-    box-shadow: 0px 2px 5px  #000;
+    box-shadow: 0px 38px 28px -23px rgba(0,0,0,0.98);
+    transform: scale(1.05);
 }
 
 .container div:first-child
@@ -539,6 +517,7 @@ section .yeet-article__text
     position: absolute;
     width: 300px;
     height: 400px;
+    box-shadow: 0px 38px 28px -23px rgba(0,0,0,0.98);
     --r: calc(var(--position) - var(--offset));
     --abs: max(calc(var(--r) * -1), var(--r));
     transition: all 0.25s linear;
@@ -626,12 +605,16 @@ section .yeet-article__text
     text-align: justify;
     height: 605px;
     position: relative;
+    /* background: #fff; */
+    background: linear-gradient(360deg, #fff, #302f2fbf);
+    box-shadow: 0px -44px 36px -43px rgba(0,0,0,0.84);
   }
 
   .goor-yallah__text
   {
     width: 50%;
     margin: 0 auto;
+    z-index: 2;
   }
 
   .goor-yallah__text::before
@@ -674,13 +657,16 @@ section .yeet-article__text
 {
   font-family: nt fabulous, sans-serif;
   font-size: 2em;
+  color: #fff;
   margin: 40px 0;
   text-align: center;
+  z-index: 2;
 }
 
 .goor-yallah__text p
 {
   font-size: 1.2em;
+  z-index: 2;
 }
 
   footer
