@@ -605,8 +605,7 @@ section .yeet-article__text
     text-align: justify;
     height: 605px;
     position: relative;
-    /* background: #fff; */
-    background: linear-gradient(360deg, #fff, #302f2fbf);
+    background: linear-gradient(180deg, #fff, #302f2fbf);
     box-shadow: 0px -44px 36px -43px rgba(0,0,0,0.84);
   }
 
@@ -669,7 +668,59 @@ section .yeet-article__text
   z-index: 2;
 }
 
-  footer
+.yaye-fall
+{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  background: linear-gradient(360deg, #fff, #302f2fbf);
+  box-shadow: 0px -44px 36px -23px rgba(0,0,0,0.84);
+  margin-top: 20px;
+  position: relative;
+}
+
+.yaye-fall::before
+{
+  content: '';
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: -70px;
+  right: 420px;  
+  box-shadow: 5px 50px 55px -30px #000 , inset #fff 5px 5px 15px;
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0.562), rgb(236, 8, 8));
+  border-radius: 50%;
+}
+
+.yaye-fall section
+{
+  margin: 20px auto;
+}
+
+.yaye-fall section h1
+{
+  text-transform: uppercase;
+  font-size: 3em;
+  color: #fff;
+  font-family: nt fabulous;
+  text-align: center;
+  margin: 100px 0 50px 0;  
+}
+
+.yaye-fall section p
+{
+  margin: 20px 40px;
+  padding: 0 20px;
+  font-size: 1.2em;
+}
+
+.yaye-fall__img img
+{
+  height: 100vh;
+}
+
+
+footer
   {
     background: linear-gradient(150deg, rgb(112, 5, 5), #000);
     width: 100%;
